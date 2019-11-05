@@ -28,8 +28,7 @@ namespace kpiyap
     {
         public static void task1()
         {
-            Console.WriteLine("x: ");
-            int x = Convert.ToInt32(Console.Read());
+            int x = 2;
             Console.WriteLine((Math.Pow(x,2) - (5 * Math.Sqrt(2))) / (2 * Math.Pow(x,3) + 1));
         }
 
@@ -57,17 +56,23 @@ namespace kpiyap
         {
             double xn = 0.1;
             double xk = 1;
-            double x = 0;
-            while (x != xk)
+            for(double i = xn; i <= xk; i += (xk - xn) / 10)
             {
-                Console.WriteLine(Math.Sin(x));
+                Console.WriteLine(Math.Sin(i));
             }
         }
 
         public static void task2()
         {
             int num = 2323;
-            Console.WriteLine(num.ToString().ToCharArray().Length);
+            if (num > 0)
+            {
+                Console.WriteLine(num.ToString().ToCharArray().Length);
+            }
+            else
+            {
+                Console.WriteLine("is negative");
+            }
         }
     }
     class Program
