@@ -74,7 +74,7 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Lab3.task2();
+            Lab3.task1();
             Console.ReadLine();
         }
     }
