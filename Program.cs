@@ -50,13 +50,45 @@ namespace kpiyap
             }
             Console.WriteLine(1 + temp);
         }
-        
+    }
+
+    public static class Lab3
+    {
+        public static void task1()
+        {
+            double xn = 0.1;
+            double xk = 1.0;
+            for (double i = xn; i <= xk; i += (xk - xn) / 10)
+            {
+                Console.WriteLine(Math.Sin(i));
+            }
+        }
+        public static void task2()
+        {
+            int num = 3;
+            if (num > 0)
+            {
+                Console.WriteLine(num.ToString().ToCharArray().Length);
+            }
+            else
+            {
+                Console.WriteLine("is negative");
+            }
+        }
+    }
+
+    public static class Lab4
+    {
+        public static void task1()
+        {
+            
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            Lab2.task2();
+            Lab3.task1();
             Console.ReadLine();
         }
     }
