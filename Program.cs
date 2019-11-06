@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
 
 namespace kpiyap
 {
@@ -75,11 +77,112 @@ namespace kpiyap
             }
         }
     }
+
+    public enum operations
+    {
+        sum, count
+    }
+
+    public enum numberType
+    {
+        active, negative
+    }
+    public class Lab4
+    {
+        public numberType _numberType { get; set; }
+
+        public operations _operations { get; set; }
+
+        public int[] array { get; set; }
+        public Lab4(){}
+        
+        public void getSumSwithcase()
+        {
+            int sum = 0;
+            int count = 0;
+            switch (_operations)
+            {
+                case (operations.sum):
+                    switch (_numberType)
+                    {
+                        case (numberType.active):
+                            for (int i = 0; i != array.Length; ++i)
+                            {
+                                if (array[i] > 0)
+                                {
+                                    sum += array[i];
+                                }
+                            }
+                            Console.WriteLine("Sum of active: " + sum);
+                            break;
+                        case (numberType.negative):
+                            for (int i = 0; i != array.Length; ++i)
+                            {
+                                if (array[i] < 0)
+                                {
+                                    sum += array[i];
+                                }
+                            }
+                            Console.WriteLine("Sum of negative: " + sum);
+                            break;
+                        default:
+                            Console.WriteLine("error");
+                            break;
+                    }
+                    break;
+                case (operations.count):
+                    switch (_numberType)
+                    {
+                        case (numberType.active):
+                            for (int i = 0; i != array.Length; ++i)
+                            {
+                                if (array[i] > 0)
+                                {
+                                    count++;
+                                }
+                            }
+                            Console.WriteLine("Count of active: " + count);
+                            break;
+                        case (numberType.negative):
+                            for (int i = 0; i != array.Length; ++i)
+                            {
+                                if (array[i] < 0)
+                                {
+                                    count++;
+                                }
+                            }
+                            Console.WriteLine("Count of negative: " + count);
+                            break;
+                        default: 
+                            return;
+                    }
+                    break;
+            }
+        }
+
+        public void task2()
+        {
+            int indexMin = Array.IndexOf(array, array.Min());
+            int indexMax = Array.IndexOf(array, array.Max());
+            int amount = 0;
+            for (int i = indexMin; i != indexMax; ++i)
+            {
+                amount += array[i];
+            }
+            Console.WriteLine("Amount min____max: " + amount);
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Lab3.task1();
+            int[] array = new[] {-1,-2,3,4,5,6,7};
+            Lab4 lab4 = new Lab4();
+            lab4.array = array;
+            lab4._operations = operations.count;
+            lab4._numberType = numberType.negative;
+            lab4.getSumSwithcase();
+            lab4.task2();
             Console.ReadLine();
         }
     }
