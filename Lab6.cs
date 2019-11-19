@@ -50,5 +50,11 @@ namespace kpiyap
             int index = findYoungest();
             Console.WriteLine("Стаж работы " + this.emploees[index].name + " состовляет " + (this.nowTime.Year - emploees[index].time.Year) + " года");
         }
+
+        public static void task2(string name, int age, int mark)
+        {
+            string str = String.Format("{0}, age- {1} years, mark – {2}", name, age, mark);
+            Console.WriteLine(str);
+        }
     }
 }
