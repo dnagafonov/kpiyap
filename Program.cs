@@ -176,13 +176,6 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            int[] array = new[] {-1,-2,3,4,5,6,7};
-            Lab4 lab4 = new Lab4();
-            lab4.array = array;
-            lab4._operations = operations.count;
-            lab4._numberType = numberType.negative;
-            lab4.getSumSwithcase();
-            lab4.task2();
             Console.ReadLine();
         }
     }
