@@ -9,3 +9,14 @@ C:\progects\Rider\kpiyap\obj\Debug\netcoreapp2.1\kpiyap.AssemblyInfoInputs.cache
 C:\progects\Rider\kpiyap\obj\Debug\netcoreapp2.1\kpiyap.AssemblyInfo.cs
 C:\progects\Rider\kpiyap\obj\Debug\netcoreapp2.1\kpiyap.dll
 C:\progects\Rider\kpiyap\obj\Debug\netcoreapp2.1\kpiyap.pdb
+C:\progects\Rider\KPyaP\bin\Debug\netcoreapp2.1\kpiyap.deps.json
+C:\progects\Rider\KPyaP\bin\Debug\netcoreapp2.1\kpiyap.runtimeconfig.json
+C:\progects\Rider\KPyaP\bin\Debug\netcoreapp2.1\kpiyap.runtimeconfig.dev.json
+C:\progects\Rider\KPyaP\bin\Debug\netcoreapp2.1\kpiyap.dll
+C:\progects\Rider\KPyaP\bin\Debug\netcoreapp2.1\kpiyap.pdb
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.csprojAssemblyReference.cache
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.csproj.CoreCompileInputs.cache
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.AssemblyInfoInputs.cache
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.AssemblyInfo.cs
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.dll
+C:\progects\Rider\KPyaP\obj\Debug\netcoreapp2.1\kpiyap.pdb
