@@ -176,7 +176,8 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Lab5.task1(10, '1', '2');
+            Lab6 e = new Lab6();
+            e.getExperience();
             Console.ReadLine();
         }
     }
