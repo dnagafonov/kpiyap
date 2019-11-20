@@ -34,24 +34,21 @@ namespace kpiyap
         public void getNewBuyers()
         {
             fillBuyers();
-            List<Buyer> result = new List<Buyer>();
+            Dictionary<int, Buyer> res = new Dictionary<int, Buyer>(buyers);
             foreach (var i in buyers)
             {
                 foreach (var j in buyers)
                 {
                     if ((i.Value.name == j.Value.name) && (i.Key != j.Key) && (i.Value.adress == j.Value.adress))
                     {
-                        if (result.Where(c => i.Value.name != c.name) != null)
-                        {
-                            result.Add(new Buyer(i.Value.name, i.Value.adress, i.Value.discount));
-                        }
+                        res.Remove(i.Key);
                     }
                 }
             }
-
-            foreach (var VARIABLE in result)
+            Console.WriteLine("\n");
+            foreach (var VARIABLE in res)
             {
-                Console.WriteLine(VARIABLE.name);
+                Console.WriteLine(VARIABLE.Value.name);
             }
 
         }
