@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace kpiyap
 {
@@ -37,6 +38,15 @@ namespace kpiyap
                 {
                     second.Add(id++, new Emploee(emploee.Value.name, emploee.Value.time, emploee.Value.age));
                 }
+            }
+        }
+
+        public static void checkString(string str)
+        {
+            if (str.Length > 15)
+            {
+                string result = Regex.Replace(str, "[^0-9A-Z]", "");
+                Console.WriteLine(result);
             }
         }
     }
