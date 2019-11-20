@@ -181,6 +181,7 @@ namespace kpiyap
             Lab6.task2("Vitya", 18, 6);
             Lab7 l7 = new Lab7();
             l7.getWorkingShift();
+            Lab7.checkString("HelloSuka121212312312312");
             Console.ReadLine();
         }
     }
