@@ -9,6 +9,7 @@
       <e p="Lab5.cs" t="Include" />
       <e p="Lab6.cs" t="Include" />
       <e p="Lab7.cs" t="Include" />
+      <e p="Lab9.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.1" t="Include">
