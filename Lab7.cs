@@ -6,8 +6,8 @@ namespace kpiyap
 {
     public class Lab7
     {
-        Dictionary<int, Emploee> emploees = new Dictionary<int, Emploee>();
-        public void setEmploees()
+        private Dictionary<int, Emploee> emploees = new Dictionary<int, Emploee>();
+        private void setEmploees()
         {
             Emploee e1 = new Emploee("Stiven", new DateTime(2019, 08, 10, 6, 10, 0), 22);
             emploees.Add(7,e1);
