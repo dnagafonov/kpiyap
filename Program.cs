@@ -179,6 +179,8 @@ namespace kpiyap
             Lab6 e = new Lab6();
             e.getExperience();
             Lab6.task2("Vitya", 18, 6);
+            Lab7 l7 = new Lab7();
+            l7.getWorkingShift();
             Console.ReadLine();
         }
     }
