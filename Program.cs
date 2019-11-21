@@ -184,6 +184,7 @@ namespace kpiyap
             Lab7.checkString("HelloSuka121212312312312");
             Lab9 lab9 = new Lab9();
             lab9.getNewBuyers();
+            Lab8.task();
             Console.ReadLine();
         }
     }
