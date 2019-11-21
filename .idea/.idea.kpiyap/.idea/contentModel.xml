@@ -9,6 +9,7 @@
       <e p="Lab5.cs" t="Include" />
       <e p="Lab6.cs" t="Include" />
       <e p="Lab7.cs" t="Include" />
+      <e p="Lab8.cs" t="Include" />
       <e p="Lab9.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
@@ -20,6 +21,7 @@
       <e p="package-lock.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
+      <e p="song.txt" t="Include" />
     </e>
     <e p="C:\Users\REDMI\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\REDMI\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_kpiyap.606930809.00" t="ExcludeRecursive" />
