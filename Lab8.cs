@@ -7,7 +7,7 @@ namespace kpiyap
     {
         public static void task()
         {
-            var fileText = File.ReadAllText("C:/progects/Rider/KPyaP/song.txt");
+            var fileText = File.ReadAllText("C:/projects/Rider/KPyaP/song.txt");
             string[] arrayOfWords = fileText.Split(" ");
             Console.WriteLine(arrayOfWords.Length);
             int maxLenght = arrayOfWords[0].Length;
@@ -20,7 +20,7 @@ namespace kpiyap
                     longestWord = arrayOfWords[i];
                 }
             }
-            Console.WriteLine($"\nLongest word: {longestWord}\nWith length: {maxLenght}");
+            Console.WriteLine($"\nLongest word: {longestWord}\nWith length: {maxLenght}\n");
         }
     }
 }
