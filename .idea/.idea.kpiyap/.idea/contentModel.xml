@@ -6,7 +6,8 @@
       <e p="Emploee.cs" t="Include" />
       <e p="kpiyap.csproj" t="IncludeRecursive" />
       <e p="kpiyap.sln" t="IncludeFlat" />
-      <e p="Lab10.cs" t="Include" />
+      <e p="Lab10_1.cs" t="Include" />
+      <e p="Lab10_2.cs" t="Include" />
       <e p="Lab5.cs" t="Include" />
       <e p="Lab6.cs" t="Include" />
       <e p="Lab7.cs" t="Include" />

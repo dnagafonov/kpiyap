@@ -212,6 +212,10 @@ namespace kpiyap
             
             Lab8.task();
 
+            Lab10_1 lab10_1 = new Lab10_1(2, 10);
+            lab10_1.getSum();
+            lab10_1.getMul();
+            
             Lab10test.getResultOfLab10();
 
             Console.ReadLine();
