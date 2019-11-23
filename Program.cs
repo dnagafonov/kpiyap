@@ -172,6 +172,29 @@ namespace kpiyap
             Console.WriteLine("Amount min____max: " + amount);
         }
     }
+
+    class Bird
+    {
+        public int age { get; }
+        public string name { get; }
+        public Bird(){}
+
+        public Bird(string name, int age)
+        {
+            this.age = age;
+            this.name = name;
+        }
+    }
+
+    class Sparrow : Bird
+    {
+        public string food { get; }
+
+        public Sparrow(string name, int age, string food) : base(name, age)
+        {
+            this.food = food;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -179,12 +202,18 @@ namespace kpiyap
             Lab6 e = new Lab6();
             e.getExperience();
             Lab6.task2("Vitya", 18, 6);
+            
             Lab7 lab7 = new Lab7();
             lab7.getWorkingShift();
-            Lab7.checkString("HelloSuka121212312312312");
+            Lab7.checkString("HelloSobaka121212312312312");
+            
             Lab9 lab9 = new Lab9();
             lab9.getNewBuyers();
+            
             Lab8.task();
+
+            Lab10test.getResultOfLab10();
+
             Console.ReadLine();
         }
     }
