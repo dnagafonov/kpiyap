@@ -4,8 +4,8 @@ namespace kpiyap
 {
     public class Lab10_1
     {
-        private int m = 0;
-        private int n = 0;
+        private int m;
+        private int n;
         private int sum = 0;
         private int mul = 1;
 

@@ -199,25 +199,8 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Lab6 e = new Lab6();
-            e.getExperience();
-            Lab6.task2("Vitya", 18, 6);
-            
-            Lab7 lab7 = new Lab7();
-            lab7.getWorkingShift();
-            Lab7.checkString("HelloSobaka121212312312312");
-            
-            Lab9 lab9 = new Lab9();
-            lab9.getNewBuyers();
-            
-            Lab8.task();
-
-            Lab10_1 lab10_1 = new Lab10_1(2, 10);
-            lab10_1.getSum();
-            lab10_1.getMul();
-            
-            Lab10test.getResultOfLab10();
-
+            Y y = new Y(5,5,2);
+            y.run();
             Console.ReadLine();
         }
     }

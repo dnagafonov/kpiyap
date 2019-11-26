@@ -17,9 +17,9 @@ namespace kpiyap
             this.discount = discount;
         }
     }
-    public class Lab9
+    public struct Lab9
     {
-        private Dictionary<int, Buyer> buyers = new Dictionary<int, Buyer>();
+        private static Dictionary<int, Buyer> buyers = new Dictionary<int, Buyer>();
         
         private void fillBuyers()
         {
