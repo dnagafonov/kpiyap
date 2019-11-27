@@ -199,8 +199,8 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Y y = new Y(5,5,2);
-            y.run();
+            Counter counter = new Counter(10, 1, "ds");
+            Console.WriteLine(counter.getId());
             Console.ReadLine();
         }
     }
