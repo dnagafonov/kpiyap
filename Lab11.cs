@@ -4,7 +4,7 @@ namespace kpiyap
 {
     public class Y:X
     {
-        private int y;
+        private int y { get; }
         public Y(){}
 
         public Y(int x1, int x2, int y) : base(x1, x2)
@@ -31,7 +31,7 @@ namespace kpiyap
         
     }
     
-    public class Lab11
+    public abstract class Figure : Y
     {
         
     }
