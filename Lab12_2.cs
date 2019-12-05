@@ -2,11 +2,19 @@
 
 namespace kpiyap
 {
-    public class Counter
+    interface IMyClonable
     {
-        private int number { get; set; }
-        private int id { get; set; }
-        private string name { get; set; }
+        Counter myClone();
+    }
+    class Counter:IMyClonable
+    {
+        private int number;
+        private int id;
+        private string name;
+
+        public int Number { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         
         public Counter(){}
 
@@ -15,18 +23,17 @@ namespace kpiyap
             if (number > 10)
             {
                 int length = number.ToString().Length - 1;
-                this.number = number / ((int) Math.Pow(10, length));
+                Number = number / ((int) Math.Pow(10, length));
             }
             else
-                this.number = number; 
-            this.id = id;
-            this.name = name;
+                Number = number; 
+            Id = id;
+            Name = name;
         }
 
-        public int getId()
+        public Counter myClone()
         {
-            return number;
+            return new Counter(Number, Id, Name);
         }
-                
     }
 }

@@ -22,5 +22,15 @@ namespace kpiyap
             }
             Console.WriteLine($"\nLongest word: {longestWord}\nWith length: {maxLenght}\n");
         }
+
+        public static void test()
+        {
+            String path = "C:/projects/Rider/KPyaP/song.txt";
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+            {
+                writer.Write("лох это =>");
+                writer.Write("prp");
+            }
+        }
     }
 }

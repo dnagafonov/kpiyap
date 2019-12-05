@@ -175,8 +175,8 @@ namespace kpiyap
 
     class Bird
     {
-        public int age { get; }
-        public string name { get; }
+        private int age { get; }
+        private string name;
         public Bird(){}
 
         public Bird(string name, int age)
@@ -199,8 +199,13 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Counter counter = new Counter(10, 1, "ds");
-            Console.WriteLine(counter.getId());
+            Counter counter = new Counter(911534412, 1, "ds");
+            Console.WriteLine(counter.Number);
+            Console.WriteLine(counter.Id);
+            Counter clonedCouter = counter.myClone();
+            Console.WriteLine(clonedCouter.Name);
+            
+            Lab8.test();
             Console.ReadLine();
         }
     }
