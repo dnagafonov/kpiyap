@@ -27,6 +27,9 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="song.txt" t="Include" />
+      <e p="util" t="Include">
+        <e p="Sorts.cs" t="Include" />
+      </e>
     </e>
     <e p="C:\Users\REDMI\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\REDMI\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_kpiyap.-157278826.00" t="ExcludeRecursive" />
