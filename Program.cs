@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
+using kpiyap.util;
 
 namespace kpiyap
 {
@@ -199,14 +199,23 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Counter counter = new Counter(911534412, 1, "ds");
-            Console.WriteLine(counter.Number);
-            Console.WriteLine(counter.Id);
-            Counter clonedCouter = counter.myClone();
-            Console.WriteLine(clonedCouter.Name);
-            Counter c = (Counter) counter.Clone();
-            Lab8.test();
-            Counter.sortItems();
+            Counter counter = new Counter(3, 1, "Vlad");
+            Console.WriteLine("Original counter id: " + counter.Id);
+            Console.WriteLine("Original counter name: " + counter.Name);
+            Console.WriteLine("Original counter number: " + counter.Number + "\n");
+            
+            Counter clonedCouter = counter.myClone(); // test custom clone
+            Console.WriteLine("Custom cloned id: " + clonedCouter.Id);
+            Console.WriteLine("Custom cloned name: " + clonedCouter.Name);
+            Console.WriteLine("Custom cloned number: " + clonedCouter.Number + "\n");
+            
+            Counter cloned = (Counter) counter.Clone(); //test clone
+            Console.WriteLine("Cloned id: " + cloned.Id);
+            Console.WriteLine("Cloned name: " + cloned.Name);
+            Console.WriteLine("Cloned number: " + cloned.Number + "\n");
+
+            SortCounter.sortItems(); //sort items of counter
+            
             Console.ReadLine();
         }
     }
