@@ -13,9 +13,9 @@ namespace kpiyap
         private int id;
         private string name;
 
-        public int Number { get; set; }
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int Number { get; }
+        public int Id { get; }
+        public string Name { get; }
         
         public Counter(){}
 
@@ -31,26 +31,6 @@ namespace kpiyap
             Id = id;
             Name = name;
         }
-        public static bool operator >(Counter a, Counter b)
-        {
-            return a.id > b.id;
-        }
-
-        public static bool operator <(Counter a, Counter b)
-        {
-            return a.id < b.id;
-        }
-
-        public static void sortItems()
-        {
-            Counter[] counters = new[] {new Counter(1, 1, "1"), new Counter(2,2,"2"), new Counter(3,3,"3")};
-            Sorts<int>.bubbleSort(ref counters);
-            foreach (var VARIABLE in counters)
-            {
-                Console.WriteLine(VARIABLE.id);
-            }
-        }
-
         public Counter myClone()
         {
             return new Counter(Number, Id, Name);
