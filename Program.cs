@@ -204,8 +204,9 @@ namespace kpiyap
             Console.WriteLine(counter.Id);
             Counter clonedCouter = counter.myClone();
             Console.WriteLine(clonedCouter.Name);
-            
+            Counter c = (Counter) counter.Clone();
             Lab8.test();
+            Counter.sortItems();
             Console.ReadLine();
         }
     }

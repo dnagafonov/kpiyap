@@ -1,12 +1,13 @@
 ﻿using System;
+using kpiyap.util;
 
 namespace kpiyap
 {
-    interface IMyClonable
+    interface IMyClonable:ICloneable
     {
         Counter myClone();
     }
-    class Counter:IMyClonable
+    public class Counter:IMyClonable
     {
         private int number;
         private int id;
@@ -30,10 +31,34 @@ namespace kpiyap
             Id = id;
             Name = name;
         }
+        public static bool operator >(Counter a, Counter b)
+        {
+            return a.id > b.id;
+        }
+
+        public static bool operator <(Counter a, Counter b)
+        {
+            return a.id < b.id;
+        }
+
+        public static void sortItems()
+        {
+            Counter[] counters = new[] {new Counter(1, 1, "1"), new Counter(2,2,"2"), new Counter(3,3,"3")};
+            Sorts<int>.bubbleSort(ref counters);
+            foreach (var VARIABLE in counters)
+            {
+                Console.WriteLine(VARIABLE.id);
+            }
+        }
 
         public Counter myClone()
         {
             return new Counter(Number, Id, Name);
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
