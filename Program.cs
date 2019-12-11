@@ -214,7 +214,8 @@ namespace kpiyap
             Console.WriteLine("Cloned name: " + cloned.Name);
             Console.WriteLine("Cloned number: " + cloned.Number + "\n");
 
-            SortCounter.sortItems(); //sort items of counter
+            SortCounter sortCounter = new SortCounter();
+            sortCounter.sortItems();
             
             Console.ReadLine();
         }
