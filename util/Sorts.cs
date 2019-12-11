@@ -1,51 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace kpiyap.util
 {
-    public static class Sorts<T>
-    {
-        private static void swap(ref Counter a, ref Counter b)
-        {
-            Counter temp = a;
-            a = b;
-            b = temp;
-        }
-        public static void bubbleSortForCounter(Counter[] arr)
-        {
-            for (int i = 0; i < arr.Length; ++i)
-            {
-                for (int j = 0; j < arr.Length - i - 1; ++j)
-                {
-                    if (arr[j].Id > arr[j + 1].Id)
-                    {
-                       swap(ref arr[j], ref arr[j+1]);
-                    }
-                }
-            }
+    class SortCounter
+     {
+         private List<Counter> Counters;
 
-            int temp = 1;
-            Console.WriteLine("\nSorted counters: ");
-            foreach (var counter in arr)
-            {
-                Console.WriteLine($"{temp++})" + counter.Id);
-            }
-        }
-    }
+         public SortCounter()
+         {
+             Counters = new List<Counter>();
+         }
 
-    static class SortCounter
-    {
-        public static void sortItems()
+         private void addItems()
+         {
+             Counters.Add(new Counter(1, 4, "1"));
+             Counters.Add(new Counter(2,2,"2"));
+             Counters.Add(new Counter(3,3,"3"));
+         }
+        public void sortItems()
         {
-            Counter[] counters = {new Counter(1, 4, "1"),
-                                  new Counter(2,2,"2"),
-                                  new Counter(3,3,"3")};
+            addItems();
             Console.WriteLine("Unsorted counters: ");
             int temp = 1;
-            foreach (var counter in counters)
+            foreach (var counter in Counters)
             {
                 Console.WriteLine($"{temp++})" + counter.Id);
             }
-            Sorts<int>.bubbleSortForCounter(counters);
+
+            Counters.Sort((counter1, counter2) => { return counter1.Id.CompareTo(counter2.Id); });
+            int temp1 = 1;
+            Console.WriteLine("\nSorted counters: ");
+            foreach (var counter in Counters)
+            {
+                Console.WriteLine($"{temp1++})" + counter.Id);
+            }
         }
     }
 }

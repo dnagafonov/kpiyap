@@ -9,10 +9,6 @@ namespace kpiyap
     }
     public class Counter:IMyClonable
     {
-        private int number;
-        private int id;
-        private string name;
-
         public int Number { get; }
         public int Id { get; }
         public string Name { get; }
