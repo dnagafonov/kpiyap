@@ -199,24 +199,9 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Counter counter = new Counter(3, 1, "Vlad");
-            Console.WriteLine("Original counter id: " + counter.Id);
-            Console.WriteLine("Original counter name: " + counter.Name);
-            Console.WriteLine("Original counter number: " + counter.Number + "\n");
-            
-            Counter clonedCouter = counter.myClone(); // test custom clone
-            Console.WriteLine("Custom cloned id: " + clonedCouter.Id);
-            Console.WriteLine("Custom cloned name: " + clonedCouter.Name);
-            Console.WriteLine("Custom cloned number: " + clonedCouter.Number + "\n");
-            
-            Counter cloned = (Counter) counter.Clone(); //test clone
-            Console.WriteLine("Cloned id: " + cloned.Id);
-            Console.WriteLine("Cloned name: " + cloned.Name);
-            Console.WriteLine("Cloned number: " + cloned.Number + "\n");
-
-            SortCounter sortCounter = new SortCounter();
-            sortCounter.sortItems();
-            
+            Triangle triangle = new Triangle(1,1,1);
+            Console.WriteLine(triangle.Type);
+            triangle.getSquare();
             Console.ReadLine();
         }
     }
