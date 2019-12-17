@@ -199,7 +199,7 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Triangle triangle = new Triangle(1,1,1);
+            Triangle triangle = new Triangle(12,2,18);
             Console.WriteLine(triangle.Type);
             triangle.getSquare();
             Console.ReadLine();

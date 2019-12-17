@@ -30,7 +30,7 @@ namespace kpiyap
 
         public void getSquare()
         {
-            double p = (A + B + C) / 2;
+            double p = (A + B + C) * 0.5;
             Console.WriteLine("Square equal: " + Math.Sqrt(p * ((p - A) * (p - B) * (p - C))) );
         }
 
