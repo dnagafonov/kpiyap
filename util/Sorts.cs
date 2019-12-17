@@ -14,7 +14,7 @@ namespace kpiyap.util
 
          private void addItems()
          {
-             Counters.Add(new Counter(1, 4, "1"));
+             Counters.Add(new Counter(1, 4, "6"));
              Counters.Add(new Counter(2,2,"2"));
              Counters.Add(new Counter(3,3,"3"));
          }
