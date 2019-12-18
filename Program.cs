@@ -220,7 +220,7 @@ namespace kpiyap
                     Console.WriteLine(student.ToString());
                 }
             }
-            catch (Exception e)
+            catch (CustomException e)
             {
                 Console.WriteLine(e);
             }
