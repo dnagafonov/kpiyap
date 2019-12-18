@@ -5,58 +5,75 @@ namespace kpiyap
 {
     public class Group
     {
-        public List<Student> Students { get; }
+        public List<Student> Students { get; set; }
+        public int Min { get; set; }
 
         public Group()
         {
-            fillStudents();
+            Students = new List<Student>();
         }
 
-        private void fillStudents()
+        public void AddStudent(Student student)
         {
-            Students.Add(new Student("Ivan", "1", 7.2,400));
-            Students.Add(new Student("Konstantin", "1", 7.1,300));
-            Students.Add(new Student("Nikita", "1", 6.2,200));
-            Students.Add(new Student("Egor", "1", 3.2,360));
-            Students.Add(new Student("Vorobey", "1", 8.2,340));
+            Students.Add(student);
+        }
+
+        public void sortStudents()
+        {
+            int count = 0;
+            Students.Sort(lessFamilyIncome);
+            Students.Sort(greaterAverageMark);
+        }
+
+        private int greaterAverageMark(Student a, Student b)
+        {
+            if (a.AverageMark > b.AverageMark)
+                return 1;
+            return 0;
+        }
+        private int lessFamilyIncome(Student a, Student b)
+        {
+            if (a.FamilyIncome * 2 >= Min)
+                return 1;
+            return -1;
         }
     }
 
     public class Student
     {
-        private double avarageMark;
+        private double averageMark;
         
         public string Name { get; }
         public string Group { get; }
         public int FamilyIncome { get; }
 
-        public double AvarageMark
+        public double AverageMark
         {
-            get { return avarageMark;}
+            get { return averageMark;}
             set
             {
                 if (value > 0 && value <= 10)
-                    avarageMark = value;
+                    averageMark = value;
                 else
                     throw new Exception("Invalid average mark");
             }
         }
 
-        public override string ToString()
-        {
-            string str = string.Format("Name: {0}," +
-                                       "Group: {1}" +
-                                       "FamilyIncome: {2}" +
-                                       "Average mark: {3}", Name, Group, FamilyIncome, AvarageMark);
-            return str;
-        }
-
-        public Student(string name, string group, double avarageMark, int familyIncome)
+        public Student(string name, string group, double averageMark, int familyIncome)
         {
             Group = group;
             FamilyIncome = familyIncome;
             Name = name;
-            AvarageMark = avarageMark;
+            AverageMark = averageMark;
+        }
+        
+        public override string ToString()
+        {
+            string str = string.Format("Name:{0}   " +
+                                       "Group:{1}   " +
+                                       "FamilyIncome:{2}   " +
+                                       "Average mark:{3}   ", Name, Group, FamilyIncome, AverageMark);
+            return str;
         }
     }
 }
