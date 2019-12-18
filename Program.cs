@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using kpiyap.util;
 
@@ -199,9 +200,30 @@ namespace kpiyap
     {
         static void Main(string[] args)
         {
-            Triangle triangle = new Triangle(12,2,18);
-            Console.WriteLine(triangle.Type);
-            triangle.getSquare();
+            try
+            {
+                Group group = new Group();
+                group.Min = 300;
+                
+                group.AddStudent(new Student("Ivan", "1", 7.2,100));
+                group.AddStudent(new Student("Konstantin", "1", 5.1,30));
+                group.AddStudent(new Student("Nikita", "1", 6.2,200));
+                group.AddStudent(new Student("Egor", "1", 3.2,360));
+                group.AddStudent(new Student("Vorobey", "1", 9.2,1140));
+                group.AddStudent(new Student("Denis", "1", 6.8,2340));
+                group.AddStudent(new Student("Ksenya", "1", 8.2,840));
+
+                group.sortStudents();
+
+                foreach (Student student in group.Students)
+                {
+                    Console.WriteLine(student.ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
             Console.ReadLine();
         }
     }
