@@ -4,20 +4,28 @@ namespace kpiyap
 {
     public enum TriangleType
     {
-        Null, Equilateral, Isosceles, Rectangular
+         Equilateral, Isosceles, Rectangular
     }
     public class Triangle
     {
+        private TriangleType type;
         public int A { get; }
         public int B { get; }
         public int C { get; }
-        public TriangleType Type { get; }
+
+        public TriangleType Type;
 
         public Triangle(int a, int b, int c)
         {
-            A = a;
-            B = b;
-            C = c;
+            if (c < 0 || b < 0 || a < 0)
+                throw new Exception("negative");
+            else
+            {
+                A = a;
+                B = b;
+                C = c;
+            }
+
             if ((int) Math.Pow(A, 2) + (int) Math.Pow(B, 2) == (int) Math.Pow(C, 2))
                 Type = TriangleType.Rectangular;
             else if((int) Math.Pow(A, 2) + (int) Math.Pow(B, 2) > (int) Math.Pow(C, 2))
@@ -25,7 +33,7 @@ namespace kpiyap
             else if (A == B && A == C)
                 Type = TriangleType.Equilateral;
             else
-                throw new Exception("Can't to set type!!!");
+                throw new Exception("Nonexistent triangle");
         }
 
         public void getSquare()
