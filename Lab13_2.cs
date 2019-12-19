@@ -3,10 +3,28 @@ using System.Collections.Generic;
 
 namespace kpiyap
 {
+    public class CustomException : Exception
+    {
+        public CustomException(string message) : base(message)
+        {
+        }
+    }
     public class Group
     {
-        public List<Student> Students { get; set; }
-        public int Min { get; set; }
+        public List<Student> Students { get; }
+
+        private int min;
+        public int Min
+        {
+            get { return min; }
+            set
+            {
+                if (value <= 1000 && value > 0)
+                    min = value;
+                else
+                    throw new CustomException("Invalid min value");
+            }
+        }
 
         public Group()
         {
@@ -55,7 +73,7 @@ namespace kpiyap
                 if (value > 0 && value <= 10)
                     averageMark = value;
                 else
-                    throw new Exception("Invalid average mark");
+                    throw new CustomException("Invalid average mark");
             }
         }
 
