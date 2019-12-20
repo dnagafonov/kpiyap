@@ -205,16 +205,24 @@ namespace kpiyap
                 Group group = new Group();
                 group.Min = 300;
                 
-                group.AddStudent(new Student("Ivan", "1", 7.2,100));
-                group.AddStudent(new Student("Konstantin", "1", 5.1,30));
-                group.AddStudent(new Student("Nikita", "1", 6.2,200));
-                group.AddStudent(new Student("Egor", "1", 3.2,360));
-                group.AddStudent(new Student("Vorobey", "1", 9.2,1140));
-                group.AddStudent(new Student("Denis", "1", 6.8,2340));
-                group.AddStudent(new Student("Ksenya", "1", 8.2,840));
+                group.addStudent(new Student("Vorobey", "1", 9.2,400));
+                group.addStudent(new Student("Ivan", "1", 7.2,60));
+                group.addStudent(new Student("Ksenya", "1", 9.4,840));
+                group.addStudent(new Student("Konstantin", "1", 5.1,30));
+                group.addStudent(new Student("Nikita", "1", 6.2,100));
+                group.addStudent(new Student("Vorobey", "1", 9.2,40));
+                group.addStudent(new Student("Denis", "1", 6.8,2340));
+                group.addStudent(new Student("Ksenya", "1", 8.2,840));
 
+                Console.WriteLine("Unsorted students:");
+                foreach (Student student in group.Students)
+                {
+                    Console.WriteLine(student.ToString());
+                }
+                
                 group.sortStudents();
-
+                
+                Console.WriteLine("\nSorted students:");
                 foreach (Student student in group.Students)
                 {
                     Console.WriteLine(student.ToString());
