@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace kpiyap
 {
     public class CustomException : Exception
     {
-        public CustomException(string message) : base(message)
-        {
-        }
+        public CustomException(string message) : base(message) {}
     }
     public class Group
     {
-        public List<Student> Students { get; }
+        public List<Student> Students { get; private set; }
 
         private int min;
         public int Min
@@ -31,29 +30,29 @@ namespace kpiyap
             Students = new List<Student>();
         }
 
-        public void AddStudent(Student student)
+        public void addStudent(Student student)
         {
             Students.Add(student);
         }
 
         public void sortStudents()
         {
-            int count = 0;
-            Students.Sort(lessFamilyIncome);
-            Students.Sort(greaterAverageMark);
-        }
+            List<Student> sortedStudentsGreatMark = new List<Student>();
+            List<Student> sortedStudents = new List<Student>();
+            
+            Students.Sort((s1, s2) => s1.FamilyIncome.CompareTo(s2.FamilyIncome));
+            for (int i = 0; i < Students.Count; i++)
+            {
+                if (Students[i].FamilyIncome * 2 < Min)
+                    sortedStudents.Add(Students[i]);
+            }
+            sortedStudents.Sort((s1, s2) => s1.FamilyIncome.CompareTo(s2.FamilyIncome));
+            
+            for (int i = sortedStudents.Count; i < Students.Count; i++)
+                sortedStudentsGreatMark.Add(Students[i]);
+            sortedStudentsGreatMark.Sort((s1, s2) => s2.AverageMark.CompareTo(s1.AverageMark));
 
-        private int greaterAverageMark(Student a, Student b)
-        {
-            if (a.AverageMark > b.AverageMark)
-                return 1;
-            return 0;
-        }
-        private int lessFamilyIncome(Student a, Student b)
-        {
-            if (a.FamilyIncome * 2 >= Min)
-                return 1;
-            return -1;
+            Students = new List<Student>(sortedStudents.Union(sortedStudentsGreatMark));
         }
     }
 
