@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\Rider\\KPyaP\\kpiyap.csproj": {}
+    "C:\\projects\\Rider\\kpiyap\\kpiyap.csproj": {}
   },
   "projects": {
-    "C:\\projects\\Rider\\KPyaP\\kpiyap.csproj": {
+    "C:\\projects\\Rider\\kpiyap\\kpiyap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\Rider\\KPyaP\\kpiyap.csproj",
+        "projectUniqueName": "C:\\projects\\Rider\\kpiyap\\kpiyap.csproj",
         "projectName": "kpiyap",
-        "projectPath": "C:\\projects\\Rider\\KPyaP\\kpiyap.csproj",
+        "projectPath": "C:\\projects\\Rider\\kpiyap\\kpiyap.csproj",
         "packagesPath": "C:\\Users\\REDMI\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\Rider\\KPyaP\\obj\\",
+        "outputPath": "C:\\projects\\Rider\\kpiyap\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

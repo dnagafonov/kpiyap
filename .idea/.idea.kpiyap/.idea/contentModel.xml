@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\projects\Rider\KPyaP" t="IncludeRecursive">
+    <e p="C:\projects\Rider\kpiyap" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Emploee.cs" t="Include" />
       <e p="kpiyap.csproj" t="IncludeRecursive" />
@@ -13,6 +13,7 @@
       <e p="Lab12_2.cs" t="Include" />
       <e p="Lab13_1.cs" t="Include" />
       <e p="Lab13_2.cs" t="Include" />
+      <e p="lab14_15.cs" t="Include" />
       <e p="Lab5.cs" t="Include" />
       <e p="Lab6.cs" t="Include" />
       <e p="Lab7.cs" t="Include" />
@@ -34,6 +35,6 @@
       </e>
     </e>
     <e p="C:\Users\REDMI\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\REDMI\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_kpiyap.-157278826.00" t="ExcludeRecursive" />
+    <e p="C:\Users\REDMI\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_kpiyap.-48130319.00" t="ExcludeRecursive" />
   </component>
 </project>
