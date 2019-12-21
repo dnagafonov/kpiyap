@@ -11,7 +11,7 @@ namespace kpiyap
     public class Group
     {
         public List<Student> Students { get; private set; }
-
+        private Message message;
         private int min;
         public int Min
         {
@@ -28,15 +28,22 @@ namespace kpiyap
         public Group()
         {
             Students = new List<Student>();
+            message = MyClassEventArgs.initialMes;
+            message();
         }
 
         public void addStudent(Student student)
         {
             Students.Add(student);
+            message = MyClassEventArgs.addMes;
+            message();
         }
 
         public void sortStudents()
         {
+            message = MyClassEventArgs.sortMes;
+            message();
+            
             List<Student> sortedStudentsGreatMark = new List<Student>();
             List<Student> sortedStudents = new List<Student>();
             

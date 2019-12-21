@@ -214,10 +214,10 @@ namespace kpiyap
                 group.addStudent(new Student("Denis", "1", 6.8,2340));
                 group.addStudent(new Student("Ksenya", "1", 8.2,840));
 
-                Console.WriteLine("Unsorted students:");
+                Console.WriteLine("\nUnsorted students:");
                 foreach (Student student in group.Students)
                 {
-                    Console.WriteLine(student.ToString());
+                    Console.WriteLine(student);
                 }
                 
                 group.sortStudents();
@@ -225,12 +225,15 @@ namespace kpiyap
                 Console.WriteLine("\nSorted students:");
                 foreach (Student student in group.Students)
                 {
-                    Console.WriteLine(student.ToString());
+                    Console.WriteLine(student);
                 }
+
+                //lab 14
+                Console.WriteLine("\n14.1: " + Lab14_15.task1(Lab14_15.mathodUP));
             }
             catch (CustomException e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e.Message + "\n" + e.StackTrace);
             }
             Console.ReadLine();
         }
