@@ -229,7 +229,23 @@ namespace kpiyap
                 }
 
                 //lab 14
-                Console.WriteLine("\n14.1: " + Lab14_15.task1(Lab14_15.mathodUP));
+                UP up = Lab14_15.methodUP;
+                Console.WriteLine("\n14.1: " + Lab14_15.task1(up));
+                
+                UP lambdaUp = new UP((x) =>
+                {
+                    (double, double) tuple = (0, 0);
+                    for (double i = -1; i <= 0; i += 0.2)
+                    {
+                        x += 0.2;
+                        tuple = up(x);
+                        Console.WriteLine(tuple);
+                    }
+
+                    return tuple;
+                });
+                Console.WriteLine("\nLambdaUP:");
+                lambdaUp(-1);
             }
             catch (CustomException e)
             {

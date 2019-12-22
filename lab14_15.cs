@@ -33,7 +33,7 @@ namespace kpiyap
             return tuple;
         }
 
-        public static (double, double) mathodUP(double x)
+        public static (double, double) methodUP(double x)
         {
             return (Math.Sin(x), Math.Cos(x));
         }
