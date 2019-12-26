@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace kpiyap
 {
@@ -14,8 +16,10 @@ namespace kpiyap
             lab10.getSize();
             lab10.getDivAndMul(arr);
             lab10.getCurrentElement(arr, 3);
+            lab10.Save("binaryTest.txt");
         }
     }
+    [Serializable]
     public class Lab10
     {
         private const int scalar = 2;
@@ -94,6 +98,14 @@ namespace kpiyap
             foreach (int i in list)
             {
                 Console.Write(i + " ");
+            }
+        }
+        public void Save(string fileName)
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            using (var stream = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                binaryFormatter.Serialize(stream, this);
             }
         }
     }

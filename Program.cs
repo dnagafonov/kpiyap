@@ -202,50 +202,12 @@ namespace kpiyap
         {
             try
             {
-                Group group = new Group();
-                group.Min = 300;
+                Lab10_1 lab10_1 = new Lab10_1(2, 10);
+                lab10_1.getSum();
+                lab10_1.getMul();
+                lab10_1.Save("hello.xml");
                 
-                group.addStudent(new Student("Vorobey", "1", 9.2,400));
-                group.addStudent(new Student("Ivan", "1", 7.2,60));
-                group.addStudent(new Student("Ksenya", "1", 9.4,840));
-                group.addStudent(new Student("Konstantin", "1", 5.1,30));
-                group.addStudent(new Student("Nikita", "1", 6.2,100));
-                group.addStudent(new Student("Vorobey", "1", 9.2,40));
-                group.addStudent(new Student("Denis", "1", 6.8,2340));
-                group.addStudent(new Student("Ksenya", "1", 8.2,840));
-
-                Console.WriteLine("\nUnsorted students:");
-                foreach (Student student in group.Students)
-                {
-                    Console.WriteLine(student);
-                }
-                
-                group.sortStudents();
-                
-                Console.WriteLine("\nSorted students:");
-                foreach (Student student in group.Students)
-                {
-                    Console.WriteLine(student);
-                }
-
-                //lab 14
-                UP up = Lab14_15.methodUP;
-                Console.WriteLine("\n14.1: " + Lab14_15.task1(up));
-                
-                UP lambdaUp = new UP((x) =>
-                {
-                    (double, double) tuple = (0, 0);
-                    for (double i = -1; i <= 0; i += 0.2)
-                    {
-                        x += 0.2;
-                        tuple = up(x);
-                        Console.WriteLine(tuple);
-                    }
-
-                    return tuple;
-                });
-                Console.WriteLine("\nLambdaUP:");
-                lambdaUp(-1);
+                Lab10test.getResultOfLab10();
             }
             catch (CustomException e)
             {
