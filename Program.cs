@@ -202,12 +202,26 @@ namespace kpiyap
         {
             try
             {
-                Lab10_1 lab10_1 = new Lab10_1(2, 10);
-                lab10_1.getSum();
-                lab10_1.getMul();
-                lab10_1.Save("hello.xml");
+                //Lab10_1 lab10_1 = new Lab10_1(2, 10);
+                //lab10_1.getSum();
+                //lab10_1.getMul();
+                //lab10_1.Save("hello.xml");
                 
-                Lab10test.getResultOfLab10();
+                //Lab10test.getResultOfLab10();
+
+                int[] arr1 = new[] {1, 2, 3, 4, 5};
+                int[] arr2 = new[] {1, 2, 3, 4, 5};
+                
+                Lab17_1 l1 = new Lab17_1(arr1);
+                Lab17_1 l2 = new Lab17_1(arr2);
+                Lab17_1 res = new Lab17_1();
+                
+                Lab17_1.getMul(ref l1,ref l2, out res);
+                
+                foreach (int i in res.Arr)
+                    Console.WriteLine(i);
+
+                Console.WriteLine(l1 >= l2);
             }
             catch (CustomException e)
             {
