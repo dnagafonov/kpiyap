@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using kpiyap.practice;
 using kpiyap.util;
 
 namespace kpiyap
@@ -202,26 +203,14 @@ namespace kpiyap
         {
             try
             {
-                //Lab10_1 lab10_1 = new Lab10_1(2, 10);
-                //lab10_1.getSum();
-                //lab10_1.getMul();
-                //lab10_1.Save("hello.xml");
-                
-                //Lab10test.getResultOfLab10();
-
-                int[] arr1 = new[] {1, 2, 3, 4, 5};
-                int[] arr2 = new[] {1, 2, 3, 4, 5};
-                
-                Lab17_1 l1 = new Lab17_1(arr1);
-                Lab17_1 l2 = new Lab17_1(arr2);
-                Lab17_1 res = new Lab17_1();
-                
-                Lab17_1.getMul(ref l1,ref l2, out res);
-                
-                foreach (int i in res.Arr)
-                    Console.WriteLine(i);
-
-                Console.WriteLine(l1 >= l2);
+                CarV1 cars = new CarV1();
+                cars.Array.Add(new CarV1("S"));
+                cars.Array.Add(new CarV1(2,"L"));
+                cars.Array.Add(new CarV1(1,"h"));
+                cars.Array.Add(new CarV1(5,"c"));
+                cars.Array.Add(new CarV1(3,"b"));
+                cars.Array.Add(new CarV1(9,"A"));
+                cars.sortById();
             }
             catch (CustomException e)
             {
