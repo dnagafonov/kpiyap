@@ -4,11 +4,61 @@ namespace kpiyap.practice
 {
     public class Employee
     {
-        public string Name { get; }
-        public int Id { get; }
-        public int Experience { get; }
-        public double WorkHours { get; }
-        public int Salary { get; }
+        private int id;
+        private string name;
+        private int experience;
+        private double hours;
+        private int salary;
+        public string Name
+        {
+            get => name;
+            set
+            {
+                if (name.Length < 0)
+                    throw new Exception("Error");
+                name = value;
+            }
+        }
+        public int Id
+        {
+            get => id;
+            set
+            {
+                if (id < 0)
+                    throw new Exception("Error");
+                id = value;
+            }
+        }
+        public int Experience
+        {
+            get => experience;
+            set
+            {
+                if (experience < 0)
+                    throw new Exception("Error");
+                experience = value;
+            }
+        }
+        public double WorkHours
+        {
+            get => hours;
+            set
+            {
+                if (hours < 0)
+                    throw new Exception("Error");
+                hours = value;
+            }
+        }
+        public int Salary
+        {
+            get => salary;
+            set
+            {
+                if (salary < 0)
+                    throw new Exception("Error");
+                salary = value;
+            }
+        }
         public List<Employee> Array { get; }
 
 

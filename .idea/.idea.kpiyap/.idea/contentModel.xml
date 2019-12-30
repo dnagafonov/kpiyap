@@ -30,6 +30,7 @@
       <e p="package-lock.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="practice" t="Include">
+        <e p="Computer.cs" t="Include" />
         <e p="v1.cs" t="Include" />
         <e p="v8.cs" t="Include" />
       </e>
