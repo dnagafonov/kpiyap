@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 namespace kpiyap.practice
 {
-    public class Employee
+    public class Human
     {
         private int id;
         private string name;
-        private int experience;
-        private double hours;
+        private bool married;
+        private bool hasHasWork;
         private int salary;
         public string Name
         {
@@ -29,25 +29,15 @@ namespace kpiyap.practice
                 id = value;
             }
         }
-        public int Experience
+        public bool Married
         {
-            get => experience;
-            set
-            {
-                if (experience < 0)
-                    throw new Exception("Error");
-                experience = value;
-            }
+            get => married;
+            set => married = value;
         }
-        public double WorkHours
+        public bool HasWork
         {
-            get => hours;
-            set
-            {
-                if (hours < 0)
-                    throw new Exception("Error");
-                hours = value;
-            }
+            get => hasHasWork;
+            set => hasHasWork = value;
         }
         public int Salary
         {
@@ -59,75 +49,75 @@ namespace kpiyap.practice
                 salary = value;
             }
         }
-        public List<Employee> Array { get; }
+        public List<Human> Array { get; }
 
 
-        public Employee()
+        public Human()
         {
-            Array = new List<Employee>();
+            Array = new List<Human>();
         }
 
-        public Employee(string name)
+        public Human(string name)
         {
             Name = name;
         }
         
-        public Employee(int id, int experience)
+        public Human(int id, bool married)
         {
             Id = id;
-            Experience = experience;
+            Married = married;
         }
         
-        public Employee(int id, string name, int experience)
+        public Human(int id, string name, bool married)
         {
             Id = id;
-            Experience = experience;
+            Married = married;
             Name = name;
         }
         
-        public Employee(int id, string name, int workHours, int salary)
+        public Human(int id, string name, bool hasWork, int salary)
         {
             Salary = salary;
             Name = name;
             Id = id;
-            WorkHours = workHours;
+            HasWork = hasWork;
         }
 
         public void sortBySalary()
         {
             Array.Sort((a,b) => a.Salary.CompareTo(b.Salary));
-            foreach (Employee el in Array)
+            foreach (Human el in Array)
                 Console.WriteLine(el);
         }
         
         public void sortByName()
         {
             Array.Sort((a,b) => String.Compare(a.Name, b.Name, StringComparison.Ordinal));
-            foreach (Employee el in Array)
+            foreach (Human el in Array)
                 Console.WriteLine(el);
         }
-        public void sortByWorkHours()
+        public void sortByHasWork()
         {
-            Array.Sort((a,b) => a.WorkHours.CompareTo(b.WorkHours));
-            foreach (Employee el in Array)
+            Array.Sort((a,b) => a.HasWork.CompareTo(b.HasWork));
+            foreach (Human el in Array)
                 Console.WriteLine(el);
         }
-        public void sortByExperience()
+        public void sortByMarried()
         {
-            Array.Sort((a,b) => a.Experience.CompareTo(b.Experience));
-            foreach (Employee el in Array)
+            Array.Sort((a,b) => a.Married.CompareTo(b.Married));
+            foreach (Human el in Array)
                 Console.WriteLine(el);
         }
         public void sortById()
         {
             Array.Sort((a,b) => a.Id.CompareTo(b.Id));
-            foreach (Employee el in Array)
+            foreach (Human el in Array)
                 Console.WriteLine(el);
         }
 
         public override string ToString()
         {
-            return String.Format("Id: {0}, Experience: {1}, Name: {2}, WorkHours: {3}, Salary: {4}", Id, Experience, Name, WorkHours, Salary);
+            return String.Format("Id: {0}, Married: {1}, Name: {2}, HasWork: {3}, Salary: {4}", Id, Married, Name, HasWork, Salary);
         }
     }
 }

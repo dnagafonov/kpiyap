@@ -5,11 +5,63 @@ namespace kpiyap.practice
 {
     public class CarV1
     {
-        public string Brand { get; }
-        public int Id { get; }
-        public string Model { get; }
-        public double EngineVolume { get; }
-        public int AmountOfDoors { get; }
+        private int id;
+        private string brand;
+        private string model;
+        private double engine;
+        private int doors;
+        
+        public string Brand
+        {
+            get => brand;
+            set
+            {
+                if (brand.Length < 0)
+                    throw new Exception("Error");
+                brand = value;
+            }
+        }
+
+        public int Id
+        {
+            get => id;
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Error");
+                id = value;
+            }
+        }
+        public string Model
+        {
+            get => model;
+            set
+            {
+                if (model.Length < 0)
+                    throw new Exception("Error");
+                model = value;
+            }
+        }
+        public double EngineVolume 
+        {
+            get => engine;
+            set
+            {
+                if (engine < 1)
+                    throw new Exception("Error");
+                engine = value;
+            }
+        }
+        public int AmountOfDoors 
+        {
+            get => doors;
+            set
+            {
+                if (doors < 0)
+                    throw new Exception("Error");
+                doors = value;
+            }
+        }
         public List<CarV1> Array { get; }
 
 
