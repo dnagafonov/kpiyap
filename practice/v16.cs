@@ -14,7 +14,7 @@ namespace kpiyap.practice
             get => name;
             set
             {
-                if (name.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 name = value;
             }
@@ -24,7 +24,7 @@ namespace kpiyap.practice
             get => id;
             set
             {
-                if (id < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 id = value;
             }
@@ -44,7 +44,7 @@ namespace kpiyap.practice
             get => salary;
             set
             {
-                if (salary < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 salary = value;
             }

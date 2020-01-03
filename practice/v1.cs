@@ -16,7 +16,7 @@ namespace kpiyap.practice
             get => brand;
             set
             {
-                if (brand.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 brand = value;
             }
@@ -37,7 +37,7 @@ namespace kpiyap.practice
             get => model;
             set
             {
-                if (model.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 model = value;
             }
@@ -47,7 +47,7 @@ namespace kpiyap.practice
             get => engine;
             set
             {
-                if (engine < 1)
+                if (value < 1)
                     throw new Exception("Error");
                 engine = value;
             }
@@ -57,7 +57,7 @@ namespace kpiyap.practice
             get => doors;
             set
             {
-                if (doors < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 doors = value;
             }

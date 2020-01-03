@@ -14,7 +14,7 @@ namespace kpiyap.practice
             get => name;
             set
             {
-                if (name.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 name = value;
             }
@@ -24,7 +24,7 @@ namespace kpiyap.practice
             get => quantity;
             set
             {
-                if (quantity < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 quantity = value;
             }
@@ -34,7 +34,7 @@ namespace kpiyap.practice
             get => calories;
             set
             {
-                if (calories < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 calories = value;
             }
@@ -44,7 +44,7 @@ namespace kpiyap.practice
             get => weight;
             set
             {
-                if (weight < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 weight = value;
             }
@@ -54,7 +54,7 @@ namespace kpiyap.practice
             get => price;
             set
             {
-                if (price < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 price = value;
             }
