@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 namespace kpiyap.practice
 {
-    public class Fruit
+    public class Drink
     {
         private int quantity;
         private string name;
-        private int countOfSeeds;
+        private int calories;
         private double weight;
         private int price;
         public string Name
@@ -29,14 +29,14 @@ namespace kpiyap.practice
                 quantity = value;
             }
         }
-        public int CountOfSeeds
+        public int Calories
         {
-            get => countOfSeeds;
+            get => calories;
             set
             {
                 if (value < 0)
                     throw new Exception("Error");
-                countOfSeeds = value;
+                calories = value;
             }
         }
         public double Weight
@@ -59,33 +59,33 @@ namespace kpiyap.practice
                 price = value;
             }
         }
-        public List<Fruit> Array { get; }
+        public List<Drink> Array { get; }
 
 
-        public Fruit()
+        public Drink()
         {
-            Array = new List<Fruit>();
+            Array = new List<Drink>();
         }
 
-        public Fruit(string name)
+        public Drink(string name)
         {
             Name = name;
         }
         
-        public Fruit(int quantity, int countOfSeeds)
+        public Drink(int quantity, int calories)
         {
             Quantity = quantity;
-            CountOfSeeds = countOfSeeds;
+            Calories = calories;
         }
         
-        public Fruit(int quantity, string name, int countOfSeeds)
+        public Drink(int quantity, string name, int calories)
         {
             Quantity = quantity;
-            CountOfSeeds = countOfSeeds;
+            Calories = calories;
             Name = name;
         }
         
-        public Fruit(int quantity, string name, int weight, int price)
+        public Drink(int quantity, string name, int weight, int price)
         {
             Price = price;
             Name = name;
@@ -96,38 +96,38 @@ namespace kpiyap.practice
         public void sortByPrice()
         {
             Array.Sort((a,b) => a.Price.CompareTo(b.Price));
-            foreach (Fruit el in Array)
+            foreach (Drink el in Array)
                 Console.WriteLine(el);
         }
         
         public void sortByName()
         {
             Array.Sort((a,b) => String.Compare(a.Name, b.Name, StringComparison.Ordinal));
-            foreach (Fruit el in Array)
+            foreach (Drink el in Array)
                 Console.WriteLine(el);
         }
         public void sortByQuantity()
         {
             Array.Sort((a,b) => a.Quantity.CompareTo(b.Quantity));
-            foreach (Fruit el in Array)
+            foreach (Drink el in Array)
                 Console.WriteLine(el);
         }
         public void sortByWeight()
         {
             Array.Sort((a,b) => a.Weight.CompareTo(b.Weight));
-            foreach (Fruit el in Array)
+            foreach (Drink el in Array)
                 Console.WriteLine(el);
         }
-        public void sortByCountOfSeeds()
+        public void sortByCalories()
         {
-            Array.Sort((a,b) => a.CountOfSeeds.CompareTo(b.CountOfSeeds));
-            foreach (Fruit el in Array)
+            Array.Sort((a,b) => a.Calories.CompareTo(b.Calories));
+            foreach (Drink el in Array)
                 Console.WriteLine(el);
         }
 
         public override string ToString()
         {
-            return String.Format("Quantity: {0}, CountOfSeeds: {1}, Name: {2}, Weight: {3}, Price: {4}", Quantity, CountOfSeeds, Name, Weight, Price);
+            return String.Format("Quantity: {0}, Calories: {1}, Name: {2}, Weight: {3}, Price: {4}", Quantity, Calories, Name, Weight, Price);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace kpiyap.practice
             get => userName;
             set
             {
-                if (userName.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 userName = value;
             }
@@ -36,7 +36,7 @@ namespace kpiyap.practice
             get => ramCapacity;
             set
             {
-                if (ramCapacity < 0)
+                if (value < 0)
                     throw new Exception("Error");
                 ramCapacity = value;
             }
@@ -46,7 +46,7 @@ namespace kpiyap.practice
             get => motherboard;
             set
             {
-                if (motherboard.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 motherboard = value;
             }
@@ -56,7 +56,7 @@ namespace kpiyap.practice
             get => processor;
             set
             {
-                if (processor.Length < 0)
+                if (value.Length < 0)
                     throw new Exception("Error");
                 processor = value;
             }
