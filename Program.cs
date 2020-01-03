@@ -203,15 +203,13 @@ namespace kpiyap
         {
             try
             {
-                CarV1 cars = new CarV1();
-                cars.Array.Add(new CarV1("S"));
-                cars.Array.Add(new CarV1(2,"L"));
-                cars.Array.Add(new CarV1(1,"h"));
-                cars.Array.Add(new CarV1(5,"c"));
-                cars.Array.Add(new CarV1(3,"b"));
-                cars.Array.Add(new CarV1(9,"A"));
-                cars.sortById();
-                
+                Food cars = new Food();
+                cars.Array.Add(new Food("Sasasa"));
+                cars.Array.Add(new Food(2,123));
+                cars.Array.Add(new Food(1,352));
+                cars.Array.Add(new Food(5,432));
+                cars.Array.Add(new Food(3,1231));
+                cars.Array.Add(new Food(9,150));
             }
             catch (CustomException e)
             {
