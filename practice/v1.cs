@@ -75,10 +75,9 @@ namespace kpiyap.practice
             Brand = brand;
         }
         
-        public CarV1(int id, string brand)
+        public CarV1(int id, string brand):this(brand)
         {
             Id = id;
-            Brand = brand;
         }
         
         public CarV1( int id, string brand, double engineVolume)

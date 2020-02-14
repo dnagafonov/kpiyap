@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using kpiyap.practice;
-using kpiyap.util;
 
 namespace kpiyap
 {
@@ -199,17 +199,25 @@ namespace kpiyap
     }
     class Program
     {
+        public static void f1(string str)
+        {
+            Regex regex = new Regex(@"<b>(.*)<\/b>");
+            Console.WriteLine(regex.Matches(str)[0].Groups[1].Value);
+        }
+
+        public static int nod(int a, int b)
+        {
+            return a == b ? a : nod(Math.Max(a, b) - Math.Min(a,b), Math.Min(a,b));
+        }
+        
+        
         static void Main(string[] args)
         {
+            
             try
             {
-                Food cars = new Food();
-                cars.Array.Add(new Food("Sasasa"));
-                cars.Array.Add(new Food(2,123));
-                cars.Array.Add(new Food(1,352));
-                cars.Array.Add(new Food(5,432));
-                cars.Array.Add(new Food(3,1231));
-                cars.Array.Add(new Food(9,150));
+                Film film = new Film("n",1901,new List<Genre>(3){Genre.Comedy, Genre.Drama, Genre.Melodrama},"fd", 2000);
+                Console.WriteLine(film);
             }
             catch (CustomException e)
             {

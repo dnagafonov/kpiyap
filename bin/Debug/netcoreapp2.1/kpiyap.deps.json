@@ -7,8 +7,19 @@
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "kpiyap/1.0.0": {
+        "dependencies": {
+          "lab18": "1.0.0.0"
+        },
         "runtime": {
           "kpiyap.dll": {}
+        }
+      },
+      "lab18/1.0.0.0": {
+        "runtime": {
+          "lab18.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -16,6 +27,11 @@
   "libraries": {
     "kpiyap/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "lab18/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

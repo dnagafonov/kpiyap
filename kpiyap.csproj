@@ -5,4 +5,10 @@
         <TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="lab18, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\lab18\lab18\bin\Debug\lab18.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
