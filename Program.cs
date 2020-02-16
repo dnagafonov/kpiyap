@@ -216,8 +216,19 @@ namespace kpiyap
             
             try
             {
-                Film film = new Film("n",1901,new List<Genre>(3){Genre.Comedy, Genre.Drama, Genre.Melodrama},"fd", 2000);
-                Console.WriteLine(film);
+                Lab20 lab20 = new Lab20();
+                lab20.addFilm("FirstFilm", 2000,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "a", 100000);
+                lab20.addFilm("SecondFilm", 2010,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "b", 100000);
+                lab20.addFilm("Thirdfilm", 2002,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "a", 100000);
+                lab20.addFilm("ForthFilm", 2001,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "d", 100000);
+                lab20.addFilm("FifthFilm", 2005,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "e", 100000);
+                lab20.addFilm("SixthFilm", 2006,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "f", 100000);
+                lab20.addFilm("SeventhFilm", 2003,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "g", 100000);
+                lab20.addFilm("EighthFilm", 2007,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "e", 100000);
+                lab20.addFilm("Ninthilm", 2008,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "h", 100000);
+                lab20.addFilm("tenthFilm", 2003,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "j", 100000);
+                lab20.addFilm("ElevenFilm", 2002,new List<Genre>(){Genre.Comedy, Genre.Drama, Genre.Horror}, "k", 100000);
+                lab20.getMinYear();
             }
             catch (CustomException e)
             {

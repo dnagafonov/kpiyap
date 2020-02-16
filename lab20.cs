@@ -23,7 +23,7 @@ namespace kpiyap
             get => year;
             private set
             {
-                if(value < 1900 && value > 2021)
+                if(value < 1920 && value > 2019)
                     throw new Exception("Invalid year");
                 year = value;
             }
@@ -57,7 +57,7 @@ namespace kpiyap
             get => genres;
             private set
             {
-                if(value.Capacity != 3)
+                if(value.Count != 3)
                     throw new Exception("Invalid genres count");
             }
         }
@@ -76,16 +76,74 @@ namespace kpiyap
             Diretor = director;
             Sales = sales;
         }
+
+        public string getSales()
+        {
+            return $"{sales}$";
+        }
+        public override string ToString()
+        {
+            return $"{Name}({year})\nSales: {getSales()}\nDirector: {director}\n";
+        }
     }
     
-    public class Lab20<Film>
+    public class Lab20
     {
         private List<Film> list;
         
-        private Lab20()
+        public Lab20()
         {
-            list = new List<Film>();
+            list = new List<Film>(10);
+        }
+
+        public void addFilm(string name, int year, List<Genre> genres, string director, int sales)
+        {
+            list.Add(new Film(name, year, genres, director, sales));
+        }
+
+        public void sortFilmsByNameDirector()
+        {
+            var sortedList = from film in list
+                orderby film.Name, film.Diretor
+                select film;
+
+            foreach (Film film in sortedList)
+            {
+                Console.WriteLine(film.ToString());
+            }
+        }
+
+        public void getName()
+        {
+            var selectedFilms = from film in list
+                select film;
+                
+            foreach (var film in selectedFilms)
+            {
+                Console.WriteLine(film);
+            }
+        }
+
+        public void getAverageSum()
+        {
+            var sum = from film in list
+                where film.Year >= 2010
+                select list.Average(o => o.Sales);
+            foreach (var VARIABLE in sum)
+            {
+                Console.WriteLine(VARIABLE);
+            }
         }
         
+        public void getMinYear()
+        {
+            var min = from film in list
+                where film.Year >= 2019
+                select list.Min(e => e.Year);
+            foreach (var VARIABLE in min)
+            {
+                Console.WriteLine(VARIABLE);
+            }
+        }
     }
 }
